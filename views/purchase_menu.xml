@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="purchase_wizard_action" model="ir.actions.act_window">
+        <field name="name">Fetch Purchase Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">created.orders</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="db_purchase.created_purchase_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+    <menuitem id="purchase_order_wizard_menu"
+              name="Fetch Orders"
+              parent="purchase.menu_procurement_management"
+              action="purchase_wizard_action"
+
+    />
+
+</odoo>

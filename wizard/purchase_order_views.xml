@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="created_purchase_wizard_form" model="ir.ui.view">
+        <field name="name">created_orders.form</field>
+        <field name="model">created.orders</field>
+        <field name="arch" type="xml">
+                <form string="Fetch Created Purchase Orders">
+                    <group>
+                        <group>
+<!--                            <span>From</span>-->
+                            <field name="from_db_old" string="From"/>
+                            <field name="old_db_name"/>
+                            <field name="old_port_no"/>
+                            <field name="old_db_user_name"/>
+                            <field name="old_db_password"/>
+
+                        </group>
+                        <group>
+<!--                            <san>To</san>-->
+                            <field name="to_db_new" string="To"/>
+                            <field name="current_db_name"/>
+                            <field name="current_port_no"/>
+                            <field name="current_db_user_name"/>
+                            <field name="current_db_password"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_fetch_purchase_order"
+                                type="object" string="Fetch Now"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary"
+                                special="cancel"/>
+                    </footer>
+                </form>
+        </field>
+    </record>
+</odoo>
